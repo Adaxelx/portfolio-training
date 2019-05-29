@@ -1,27 +1,16 @@
 import React from 'react';
 import styles from '../../Styles/Modules/Navigation.module.sass'
 
-class NavBar extends React.Component{
-    state = {
-        active: false
-    }
-
-    handleClick = () =>{
-        this.setState({
-            active: !this.state.active
-        })
-    }
-
-    render(){
-        return (
-            <div className={`${styles.nav} ${this.state.active ? styles.active : ''}`} onClick={this.handleClick}>
-                    <div className={`${styles.bars} ${this.state.active ? styles.active : ''}`}>
-                    <span className={`${styles.bar} ${styles.top} ${this.state.active ? styles.active : ''}`}></span>
-                    <span className={`${styles.bar} ${styles.bot} ${this.state.active ? styles.active : ''}`}></span>
-                </div>
+const NavBar = (props) =>{
+    return (
+        <button className={`${styles.nav} ${props.active ? styles.active : ''}`} onClick={props.handleClick}>
+            <div className={`${styles.bars} ${props.active ? styles.active : ''}`}>
+                <span className={`${styles.bar} ${styles.top} ${props.active ? styles.active : ''}`}></span>
+                <span className={`${styles.bar} ${styles.bot} ${props.active ? styles.active : ''}`}></span>
             </div>
-         );
-    }
+        </button>
+    );
 }
+
 
 export default NavBar;
