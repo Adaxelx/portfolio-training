@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../Styles/Modules/Navigation.module.sass'
+import styles from '../../Styles/Modules/ButtonNav.module.sass'
 
 const NavBar = (props) =>{
     return (
