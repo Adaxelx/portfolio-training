@@ -1,19 +1,61 @@
+@import '../variables+mixins+placeholders/_variables.sass'
+
 .nav
-    width: 200%
+    width: 250%
     height: 100vh
     background-color: black
     transform-origin: top right
     transform: rotate(-90deg)
-    transition: .5s
+    transition: .4s
     right: 0
     position: fixed
-    &.active
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &.open
         transform: rotate(0deg)
 .content
     position: absolute
-    width: 50%
-    height: 100vh
-    left: 50%
+    width: 40%
+    left: 60%
 .list
-    position: absolute
+    margin-left: $margin-edge
+    list-style-type: none
+    & .link
+        text-transform: uppercase
+        color: white
+        text-decoration: none
+        font-size: $font-sizeBig
+        font-weight: 800
+li
+    opacity: 0
+    transform: translateX(70%) translateY(300%)
+    transition: .5s .1s
+.second
+    transition-delay: .15s
+.third
+    transition-delay: .2s
+.socials
     color: white
+    font-size: $font-sizeBig
+    margin-top: $margin-content
+    margin-left: $margin-edge
+.text
+    margin-right: $margin-edge
+    font-size: $font-sizeContent
+    opacity: 0
+    transform: translateX(30%) translateY(100%)
+    transition: .5s .25s
+i
+    margin-top: $margin-content
+    margin-right: $margin-edge
+    transition: .5s .3s
+    opacity: 0
+    transform: translateX(50%) translateY(150%)
+i:nth-of-type(2)
+    transition-delay: .35s
+i:nth-of-type(3)
+    transition-delay: .4s
+.active
+    opacity: 1
+    transform: translateX(0)
