@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <section className={styles.home}>
             <h1 className={styles.title}>Adrian Mostowski</h1>
-            <h2 className={styles.subtitle}>- Front-End Developer</h2>
+            <h2 className={styles.subtitle}>Front-End Developer</h2>
             <div className={styles.bg}>
             <img src={img} alt="to ja" className={styles.img}/>
             </div>
