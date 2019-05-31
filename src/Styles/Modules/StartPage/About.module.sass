@@ -1,7 +1,6 @@
 @import '../../variables+mixins+placeholders/_variables.sass'
 
 .about
-    height: 100vh
     width: 100%
     display: flex
     flex-direction: column
@@ -39,3 +38,12 @@
     transform: rotate(-90deg) translateX(-200%)
 .about.active .title::after
     transform: translateX(100%)
+
+.content
+    font-size: $font-sizeContent
+    margin: $margin-edge $margin-edge 0 $margin-edge
+    & img
+        width: 100%
+        margin-bottom:  $margin-edge
+    & p
+        margin-bottom: $margin-edge
