@@ -22,7 +22,7 @@ class App extends React.Component{
         <NavBar active={this.state.active} handleClick={this.handleClick}/>
         <NavOpen active={this.state.active} handleClick={this.handleClick}/>
         <Switch>
-          <Route path='/' component={StartPage}></Route>
+          <Route exact path='/' component={StartPage}></Route>
         </Switch>
     </Router>
     </div>
