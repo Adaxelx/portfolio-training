@@ -85,7 +85,7 @@ class Skills extends React.Component {
                          <img src={html} alt="html"/>
                     </div>
                     <div className={styles.front}>
-                        <h3>HTML</h3>
+                        <div className={styles.bgH3}><h3>HTML</h3></div>
                     </div>
                 </section>
                 <section ref={images[1]} className={`${styles.image} ${activeCards[1] ? styles.active : ''}`}>
@@ -93,7 +93,7 @@ class Skills extends React.Component {
                          <img src={css} alt="html"/>
                     </div>
                     <div className={styles.front}>
-                        <h3>CSS</h3>
+                        <div className={styles.bgH3}><h3>CSS</h3></div>
                     </div>
                 </section>
                   <section ref={images[2]}  className={`${styles.image} ${activeCards[2] ? styles.active : ''}`}>
@@ -101,7 +101,7 @@ class Skills extends React.Component {
                          <img src={js} alt="html"/>
                     </div>
                     <div className={styles.front}>
-                        <h3>Javascript</h3>
+                        <div className={styles.bgH3}><h3>Javascript</h3></div>
                     </div>
                 </section>
                 <section ref={images[3]}  className={`${styles.image} ${activeCards[3] ? styles.active : ''}`}>
@@ -109,7 +109,7 @@ class Skills extends React.Component {
                          <img src={git} alt="html"/>
                     </div>
                     <div className={styles.front}>
-                        <h3>Git + github</h3>
+                       <div className={styles.bgH3}><h3>Git + github</h3></div>
                     </div>
                 </section>
             </section>
