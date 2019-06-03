@@ -8,7 +8,7 @@ import css from '../../images/skills/css.png'
 import git from '../../images/skills/git.png'
 import react from '../../images/skills/React.png'
 import js from '../../images/skills/js.png'
-import node from '../../images/skills/nodejs.png'
+import node from '../../images/skills/nodejslogo.png'
 import sass from '../../images/skills/sass.png'
 
 let scrollV = window.scrollY
@@ -46,7 +46,6 @@ class Skills extends React.Component {
             this.setState({
                 activeCards
             })
-            console.log(this.state.activeCards)
         })
 
         // if(scrollV>image1.current.offsetTop + image1.current.offsetHeight/2){
@@ -55,7 +54,7 @@ class Skills extends React.Component {
     }
 
     createRefs = () => {
-        for(let i =0;i<4;i++){
+        for(let i =0;i<7;i++){
             this.images[i] = React.createRef()
         }
     }
@@ -69,7 +68,8 @@ class Skills extends React.Component {
     }
 
     section = React.createRef();
-    title = React.createRef()
+    title = React.createRef();
+    title2 = React.createRef();
     section2 = React.createRef();
     render() {
         const {section,title,images,section2} = this
@@ -110,6 +110,30 @@ class Skills extends React.Component {
                     </div>
                     <div className={styles.front}>
                        <div className={styles.bgH3}><h3>Git + github</h3></div>
+                    </div>
+                </section>
+                <section ref={images[4]}  className={`${styles.image} ${activeCards[4] ? styles.active : ''}`}>
+                    <div className={styles.back}>
+                         <img src={react} alt="html"/>
+                    </div>
+                    <div className={styles.front}>
+                       <div className={styles.bgH3}><h3>React</h3></div>
+                    </div>
+                </section>
+                <section ref={images[5]}  className={`${styles.image} ${activeCards[5] ? styles.active : ''}`}>
+                    <div className={styles.back}>
+                         <img src={sass} alt="html"/>
+                    </div>
+                    <div className={styles.front}>
+                       <div className={styles.bgH3}><h3>Sass</h3></div>
+                    </div>
+                </section>
+                <section ref={images[6]}  className={`${styles.image} ${activeCards[6] ? styles.active : ''}`}>
+                    <div className={styles.back}>
+                         <img src={node} alt="html"/>
+                    </div>
+                    <div className={styles.front}>
+                       <div className={styles.bgH3}><h3>Node.js</h3></div>
                     </div>
                 </section>
             </section>
