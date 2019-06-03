@@ -1,0 +1,42 @@
+@import '../../variables+mixins+placeholders/_variables.sass'
+
+
+.container
+    height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $yellow-color
+.bg
+    margin-top: $margin-edge
+    background-color: white
+.title
+    position: relative
+    font-size: $font-sizeBig
+    text-transform: uppercase
+    overflow: hidden
+    transform: translate(15px,15px)
+    &::before
+        content: ""
+        width: 50px
+        height: 2px
+        background-color: black
+        position: absolute
+        transform: rotate(-90deg)
+        transform-origin: left top
+        transition: 1s
+    &::after
+        content: ""
+        width: 100%
+        height: 2px
+        background-color: black
+        position: absolute
+        bottom: 0
+        left: 0
+        transform: translateX(-100%)
+        transition: 1s .5s
+.container.active .title::before
+    transform: rotate(-90deg) translateX(-200%)
+.container.active .title::after
+    transform: translateX(100%)
