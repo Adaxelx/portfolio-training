@@ -32,11 +32,11 @@ class Skills extends React.Component {
                 active: true
             })
         }
-        else{
-            this.setState({
-                active: false
-            })
-        }
+        // else{
+        //     this.setState({
+        //         active: false
+        //     })
+        // }
 
         this.images.forEach((img,i) => {
 

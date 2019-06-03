@@ -15,11 +15,11 @@ class About extends React.Component{
                 active: true
             })
         }
-        else{
-            this.setState({
-                active: false
-            })
-        }
+        // else{
+        //     this.setState({
+        //         active: false
+        //     })
+        // }
     }
 
     componentDidMount() {
