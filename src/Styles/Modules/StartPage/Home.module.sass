@@ -7,13 +7,18 @@
     display: flex
     flex-direction: column
     justify-content: center
+    position: relative
 .bg
     width: 80%
     background-color: $yellow-color
     margin-left: 10%
+    position: relative
 .img
     width: 100%
-    transform: translate(15px,15px)
+    position: relative
+    bottom: 0
+    right: 0
+    transform: translate(1.5rem,1.5rem)
 .title
     margin: 0 10% 0 10%
     font-size: $font-sizeBig
@@ -27,14 +32,50 @@
         position: absolute
         bottom: 0
         animation: move-line 2s cubic-bezier(.82,-0.13,.64,1.15) both
-
 .subtitle
     margin-left: 10%
     font-size: $font-sizeSubtitle
     margin-bottom: $margin-content
+
 
 @keyframes move-line
   0%
     transform: translateX(-100%)
   100%
     transform: translateX(100%)
+
+@media (orientation: landscape)
+    .home
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+    .titles
+        position: relative
+        width: 50%
+    .title
+        margin: 0
+    .subtitle
+        margin: 0
+    .bg
+        margin: 0
+        height: 80%
+        width: 35%
+    .img
+        width: auto
+        height: 100%
+
+@media (orientation: landscape) and (min-width: 1024px)
+    .bg
+        margin: 0
+        height: 80%
+        width: 45%
+        position: absolute
+        right: 5%
+@media (orientation: landscape) and (min-width: 1280px)
+    .bg
+        margin: 0
+        height: 80%
+        width: 45%
+        position: absolute
+        right: 5%

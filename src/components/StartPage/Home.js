@@ -4,8 +4,10 @@ import styles from '../../Styles/Modules/StartPage/Home.module.sass'
 const Home = () => {
     return (
         <article className={styles.home}>
+            <div className={styles.titles}>
             <h1 className={styles.title}>Adrian Mostowski</h1>
             <h2 className={styles.subtitle}>Front-End Developer</h2>
+            </div>
             <section className={styles.bg}>
                 <img src={img} alt="to ja" className={styles.img}/>
             </section>
