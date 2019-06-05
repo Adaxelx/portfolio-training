@@ -47,3 +47,31 @@
         margin-bottom:  $margin-edge
     & p
         margin-bottom: $margin-edge
+
+@media (orientation: landscape)
+    .content
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        & img
+            width: 50%
+        & p
+            margin-bottom: $margin-edge
+    .text
+        width: 45%
+        margin-left: 3rem
+
+@media (orientation: landscape) and (min-width: 640px)
+    .about.active .title::before
+        transform: rotate(-90deg) translateX(-250%)
+    .about.active .title::after
+        transform: translateX(150%)
+@media (orientation: landscape) and (min-width: 1280px)
+    .about.active .title::before
+        transform: rotate(-90deg) translateX(-350%)
+    .about.active .title::after
+        transform: translateX(200%)
+    .content
+        justify-content: space-around
+        & img
+            width: 40%
