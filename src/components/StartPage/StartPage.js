@@ -3,6 +3,7 @@ import Home from './Home.js'
 import About from './About.js'
 import Skills from './Skills.js'
 import Projects from './Projects.js'
+import styles from '../../Styles/Modules/StartPage/StartPage.module.sass'
 class StarPage extends React.Component {
     state = {  }
 
@@ -12,7 +13,7 @@ class StarPage extends React.Component {
 
     render() {
         return (
-        <article>
+        <article className={styles.container}>
             <Home/>
             <About/>
             <Skills/>
