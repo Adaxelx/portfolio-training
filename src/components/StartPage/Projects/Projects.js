@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../../../Styles/Modules/StartPage/Project.module.sass'
 import Project from './Project'
-import img1 from '../../../images/projects/strona1.png'
-import img2 from '../../../images/projects/strona2.png'
-import img3 from '../../../images/projects/strona3.png'
+import img1 from '../../../images/projects/salon.png'
+import img2 from '../../../images/projects/react-router-2.png'
+import img3 from '../../../images/projects/react-router.png'
 import img4 from '../../../images/projects/windows.png'
 let scrollV
 
@@ -21,24 +21,24 @@ class Projects extends React.Component {
     },
     {
         key: 1,
-        src: img2,
-        content: 'Jest to szablon strony opartej na reactcie. Dodatkiem do niej jest react-router oraz kilka ciekawych animacji',
-        link: 'https://adaxelx.github.io/react-react-router-2/'
-    },
-    {
-        key: 2,
-        src: img3,
-        content: 'Jeden z moich pierwszych projektów opartych na reactcie. Jest w nim jednak kilka ciekawych rozwiązań i animacji, które warto zobaczyć.',
-        link: 'https://adaxelx.github.io/react-with-router/'
-    },
-    {
-        key: 3,
         title: 'Windows',
         src: img4,
         content:
           'Jest to mój pierwszy wspólny projekt, czyli klasyczny windows. Przenoszenie ikon, pasek zadań z zegarkiem i menu start otwierające się okna z połączonymi ściezkami - to wszystko jest tutaj. Projekt jest oparty na reactcie, ale nie zabrakło tam tez styled-components czy context-api.',
         link: 'https://github.com/superkacper4/windows',
-      },]
+    },
+    {
+        key: 2,
+        src: img2,
+        content: 'Jest to szablon strony opartej na reactcie. Dodatkiem do niej jest react-router oraz kilka ciekawych animacji',
+        link: 'https://adaxelx.github.io/react-react-router-2/'
+    },
+    {
+        key: 3,
+        src: img3,
+        content: 'Jeden z moich pierwszych projektów opartych na reactcie. Jest w nim jednak kilka ciekawych rozwiązań i animacji, które warto zobaczyć.',
+        link: 'https://adaxelx.github.io/react-with-router/'
+    },]
 
     handleScroll = () =>{
         const {section} = this
@@ -74,7 +74,9 @@ class Projects extends React.Component {
                 <section className={styles.bg}>
                     <h2 className={styles.title}>Projekty</h2>
                 </section>
-                {sections}
+                <section className={styles.sections}>
+                    {sections}
+                </section>
             </article>
         );
     }
