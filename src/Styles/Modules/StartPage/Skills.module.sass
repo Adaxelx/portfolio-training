@@ -31,10 +31,10 @@
         position: absolute
         bottom: 0
         left: 0
-        transform: translateX(-100%)
+        transform: translateX(-150%)
         transition: 1s .5s
 .container.active .title::before
-    transform: rotate(-90deg) translateX(-200%)
+    transform: rotate(-90deg) translateX(-300%)
 .container.active .title::after
     transform: translateX(100%)
 .images
@@ -84,3 +84,20 @@
     background-color: white
     position: relative
     margin-top: $margin-edge
+
+@media (orientation: landscape)
+    .images
+        flex-direction: row
+        align-items: center
+        flex-wrap: wrap;
+        justify-content: space-around
+        & .image
+            width: 40%
+            height: 200px
+@media (orientation: landscape) and (min-width: 768px)
+    .images
+        & .image
+            width: 30%
+            height: 200px
+
+    

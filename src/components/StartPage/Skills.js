@@ -25,7 +25,7 @@ class Skills extends React.Component {
 
     handleScroll = () =>{
         let activeCards = [false,false,false,false]
-        const {section, title,image1,section2} = this
+        const {section} = this
         scrollV = window.scrollY
         if(scrollV>section.current.offsetTop - window.innerHeight + 200){
             this.setState({
@@ -39,8 +39,9 @@ class Skills extends React.Component {
         }
 
         this.images.forEach((img,i) => {
-
-            if(scrollV> section2.current.offsetTop + 40 + i*280 - window.innerHeight + img.current.offsetHeight){
+            const off = img.current.getBoundingClientRect().top
+            const height = img.current.offsetHeight
+            if(off < window.innerHeight - height / 4){
                 activeCards[i] = true
             }
             this.setState({

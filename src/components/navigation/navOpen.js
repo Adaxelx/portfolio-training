@@ -6,15 +6,16 @@ class navOpen extends React.Component {
     state = {  }
 
     render(props) {
+        const {active,handleClick} = this.props
         return (
-            <nav className={`${styles.nav} ${this.props.active ? styles.open : ''}`}>
+            <nav className={`${styles.nav} ${active ? styles.open : ''}`}>
                 <div className={styles.content}>
                     <ul className={styles.list}>
-                        <NavLink to='/' className={`${styles.link}`}>
+                        <NavLink to='/' className={`${styles.link}`} onClick={handleClick}>
                             <li className={`${this.props.active ? styles.active : ''}`}>Start</li></NavLink>
-                        <NavLink to='/about' className={`${styles.link}`}>
+                        <NavLink to='/about' className={`${styles.link}`} onClick={handleClick}>
                             <li className={`${styles.second} ${this.props.active ? styles.active : ''}`}>O mnie</li></NavLink>
-                        <NavLink to='/contact' className={`${styles.link}`}>
+                        <NavLink to='/contact' className={`${styles.link}`} onClick={handleClick}>
                             <li className={`${styles.third} ${this.props.active ? styles.active : ''}`}>Kontakt</li></NavLink>
                     </ul>
                     <aside className={`${styles.socials}`}>

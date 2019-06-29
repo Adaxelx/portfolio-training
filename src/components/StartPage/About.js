@@ -8,7 +8,7 @@ class About extends React.Component{
     }
 
     handleScroll = () =>{
-        const {section, title} = this
+        const {section} = this
         scrollV = window.scrollY
         if(scrollV>section.current.offsetTop - window.innerHeight + 200){
             this.setState({
