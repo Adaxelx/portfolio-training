@@ -7,6 +7,7 @@
     flex-direction: column
     align-items: center
     background-color: $yellow-color
+    padding-bottom: $margin-edge
 .bg
     margin-top: $margin-edge
     background-color: white
@@ -35,30 +36,3 @@
         left: 0
         transform: translateX(-200%)
         transition: 1s .5s
-.container.active .title::before
-    transform: rotate(-90deg) translateX(-330%)
-.container.active .title::after
-    transform: translateX(100%)
-.project
-    margin-top: $margin-edge
-    width: 80%
-    display: flex
-    flex-direction: column
-    align-items: center
-    background-color: white
-    padding: 10px
-    & img
-        width: 100%
-        border: 1px solid black
-    & p
-        font-size: $font-sizeContent
-        margin-top: 20px
-.button
-    height: 50px
-    width: 50px
-    background-color: white
-    border: none
-    color: black
-    text-align: center
-    font-size: $font-sizeBig
-    margin-top: 20px
