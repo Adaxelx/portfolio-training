@@ -5,15 +5,10 @@ import img1 from '../../../images/projects/salon.png'
 import img2 from '../../../images/projects/react-router-2.png'
 import img3 from '../../../images/projects/react-router.png'
 import img4 from '../../../images/projects/windows.png'
-let scrollV
+import Title from '../../Title'
 
-class Projects extends React.Component {
-    state = {
-        active: false
-     }
-
-    images = []
-    data = [{
+const Projects = () => {
+    const data = [{
         key: 0,
         src: img1,
         content:'Jedna z wielu prób utworzenia strony salonu fryzjerskiego. Mozna tam znaleźć animacje na scrolla, formularz, rózne nawigacje na desktop/mobile oraz ciekawą animacje routingu. Strona oparta na reactcie z wykorzystaniem react-routera, react - transition - group oraz preprocesora Sass.',
@@ -38,48 +33,17 @@ class Projects extends React.Component {
         src: img3,
         content: 'Jeden z moich pierwszych projektów opartych na reactcie. Jest w nim jednak kilka ciekawych rozwiązań i animacji, które warto zobaczyć.',
         link: 'https://adaxelx.github.io/react-with-router/'
-    },]
-
-    handleScroll = () =>{
-        const {section} = this
-        scrollV = window.scrollY
-        if(scrollV>section.current.offsetTop - window.innerHeight + 200){
-            this.setState({
-                active: true
-            })
-        }
-        // else{
-        //     this.setState({
-        //         active: false
-        //     })
-        // }
-    }
-
-    section= React.createRef()
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
-        for(let i=0;i<3;i++){
-            this.images[i] = React.createRef()
-        }
-    }
-    componentWillUnmount(){
-        window.removeEventListener('scroll', this.handleScroll)
-    }
-    render() {
-        const {section,data} = this
-        const sections = data.map(sec => <Project src={sec.src} content={sec.content} key={sec.key} link={sec.link}/>)
+    },];
+    const sections = data.map(sec => <Project src={sec.src} content={sec.content} key={sec.key} link={sec.link}/>);
         return (
-            <article ref={section} className={`${styles.container} ${this.state.active ? styles.active : ''}`}>
-                <section className={styles.bg}>
-                    <h2 className={styles.title}>Projekty</h2>
-                </section>
+            <article className={styles.container}>
+                <Title white={true} content='Projekty'/>
                 <section className={styles.sections}>
                     {sections}
                 </section>
             </article>
         );
-    }
 }
+
 
 export default Projects;

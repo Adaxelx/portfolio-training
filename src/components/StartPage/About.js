@@ -1,45 +1,13 @@
 import React from 'react';
 import styles from '../../Styles/Modules/StartPage/About.module.sass'
 import img from '../../images/Tkd.jpg'
+import Title from '../Title'
 let scrollV = window.scrollY
-class About extends React.Component{
-    state = {
-        active: false,
-    }
 
-    handleScroll = () =>{
-        const {section} = this
-        scrollV = window.scrollY
-        if(scrollV>section.current.offsetTop - window.innerHeight + 200){
-            this.setState({
-                active: true
-            })
-        }
-        // else{
-        //     this.setState({
-        //         active: false
-        //     })
-        // }
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
-    }
-    componentWillUnmount(){
-        window.removeEventListener('scroll', this.handleScroll)
-    }
-
-    section = React.createRef();
-    title = React.createRef()
-
-    render(){
-    const {section,title} = this
-    const {active} = this.state
+const About = () =>{
     return (
-        <article ref={section} className={`${styles.about} ${active ? styles.active : ''}`}>
-            <section className={styles.container}>
-                <h2 ref={title}className={styles.title}>O mnie</h2>
-            </section>
+        <article className={styles.about}>
+            <Title white={true} content='O mnie'/>
             <section className={styles.content}>
                 <img src={img} alt="ME2018"/>
 
@@ -53,8 +21,6 @@ class About extends React.Component{
             </section>
         </article>
      );
-    }
-
 }
 
 export default About;

@@ -8,34 +8,6 @@
     align-items: center
     background-color: $yellow-color
     padding-bottom: $margin-edge
-.bg
-    margin-top: $margin-edge
-    background-color: white
-.title
-    position: relative
-    font-size: $font-sizeBig
-    text-transform: uppercase
-    overflow: hidden
-    transform: translate(15px,15px)
-    &::before
-        content: ""
-        width: 50px
-        height: 2px
-        background-color: black
-        position: absolute
-        transform: rotate(-90deg)
-        transform-origin: left top
-        transition: 1s
-    &::after
-        content: ""
-        width: 100%
-        height: 2px
-        background-color: black
-        position: absolute
-        bottom: 0
-        left: 0
-        transform: translateX(-200%)
-        transition: 1s .5s
 .sections
     display: flex
     flex-direction: column
