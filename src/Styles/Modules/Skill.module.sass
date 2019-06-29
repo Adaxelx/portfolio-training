@@ -1,0 +1,53 @@
+@import '../variables+mixins+placeholders/_variables.sass'
+
+.image
+    position: relative
+    width: 80%
+    height: 200px
+    margin: $margin-edge 0 $margin-edge 0
+    transition: .5s
+.front
+    backface-visibility: hidden
+    width: 100%
+    height: 100%
+    position: absolute
+    transform: perspective(600px) rotateY(0deg)
+    background-color: white
+    transition: .5s
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: $font-sizeSubtitle
+    background-color: $yellow-color
+    & h3
+        transform: translate(10%,30%)
+.back
+    backface-visibility: hidden
+    width: 100%
+    height: 100%
+    position: absolute
+    transform: perspective(600px) rotateY(-180deg)
+    transition: .5s
+    display: flex
+    justify-content: center
+    align-items: center
+    & img
+        height: 100%
+.image.active .back
+    transform: perspective(600px) rotateY(0deg)
+.image.active .front
+    transform: perspective(600px) rotateY(180deg)
+.bgH3
+    background-color: white
+    position: relative
+    margin-top: $margin-edge
+
+@media (orientation: landscape)
+    .image
+        width: 40%
+        height: 200px
+
+@media (orientation: landscape) and (min-width: 768px)
+    .image
+        width: 30%
+        height: 200px
