@@ -6,7 +6,6 @@ class Skill extends React.Component{
     state = {active: false}
 
     handleScroll = () =>{
-        const scrollV = window.scrollY
         const { ref } = this
         if (ref.current !== undefined && ref.current !== null) {
           const off = ref.current.getBoundingClientRect().top;
