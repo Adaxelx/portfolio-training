@@ -13,8 +13,8 @@ class navOpen extends React.Component {
                     <ul className={styles.list}>
                         <NavLink to='/' className={`${styles.link}`} onClick={handleClick}>
                             <li className={`${this.props.active ? styles.active : ''}`}>Start</li></NavLink>
-                        <NavLink to='/about' className={`${styles.link}`} onClick={handleClick}>
-                            <li className={`${styles.second} ${this.props.active ? styles.active : ''}`}>O mnie</li></NavLink>
+                        {/* <NavLink to='/about' className={`${styles.link}`} onClick={handleClick}>
+                            <li className={`${styles.second} ${this.props.active ? styles.active : ''}`}>O mnie</li></NavLink> */}
                         <NavLink to='/contact' className={`${styles.link}`} onClick={handleClick}>
                             <li className={`${styles.third} ${this.props.active ? styles.active : ''}`}>Kontakt</li></NavLink>
                     </ul>
