@@ -3,6 +3,10 @@
 .form
     margin-top: $margin-content
     position: relative
+    width: 80%
+    padding: 5px;
+    display: flex
+    flex-direction: column
     &::before
         content: ""
         position: absolute
@@ -16,11 +20,23 @@
 .title
     font-size: $font-sizeSubtitle
 
-.story
+.container
     width: 100%
-    display: flex
-    align-items: center
+    margin-top: 15px
 
 .content
     font-size: $font-sizeContent
-    display: inline
+
+.input
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid black
+    width: 100%
+    padding: 5px 0
+
+.message
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid black
+    width: 100%
+    padding: 5px 0
