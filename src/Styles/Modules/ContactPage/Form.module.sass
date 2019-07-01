@@ -1,0 +1,26 @@
+@import '../../variables+mixins+placeholders/_variables.sass'
+
+.form
+    margin-top: $margin-content
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        height: 100%
+        width: 50%
+        top: 0
+        left: 0
+        z-index: -1
+        background-color: $yellow-color
+
+.title
+    font-size: $font-sizeSubtitle
+
+.story
+    width: 100%
+    display: flex
+    align-items: center
+
+.content
+    font-size: $font-sizeContent
+    display: inline
