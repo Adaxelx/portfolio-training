@@ -21,6 +21,8 @@ class Title extends React.Component{
     ref = React.createRef()
 
     componentDidMount() {
+        const {handleScroll} = this
+        setTimeout(handleScroll,500)
         window.addEventListener('scroll', this.handleScroll)
     }
     componentWillUnmount(){
