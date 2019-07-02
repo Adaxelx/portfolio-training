@@ -20,9 +20,9 @@ class navOpen extends React.Component {
                     </ul>
                     <aside className={`${styles.socials}`}>
                         <p className={`${styles.text} ${this.props.active ? styles.active : ''}`}>Jeżeli chcesz dowiedzieć się o mnie więcej zapraszam na moje media społecznościowe i githuba</p>
-                        <i className={`fab fa-github ${this.props.active ? styles.active : ''}`}></i>
-                        <i className={`fab fa-facebook-f ${this.props.active ? styles.active : ''}`}></i>
-                        <i className={`fab fa-instagram ${this.props.active ? styles.active : ''}`}></i>
+                        <a target="_blank" rel="noopener noreferrer" href='https://github.com/Adaxelx'><i className={`fab fa-github ${this.props.active ? styles.active : ''}`}></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href='https://github.com/Adaxelx'><i className={`fab fa-facebook-f ${this.props.active ? styles.active : ''}`}></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href='https://github.com/Adaxelx'><i className={`fab fa-instagram ${this.props.active ? styles.active : ''}`}></i></a>
                     </aside>
                 </div>
             </nav>

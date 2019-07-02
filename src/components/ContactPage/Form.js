@@ -4,7 +4,6 @@ import styles from '../../Styles/Modules/ContactPage/Form.module.sass'
 class Form extends React.Component {
     state = {
         username: '',
-        company: '',
         reason: '',
         message: '',
         email: '',
@@ -23,11 +22,9 @@ class Form extends React.Component {
         return (
             <form action="" className={styles.form}>
                 <h3 className={styles.title}>Opowiedz swoją historię: </h3>
+                <section className={styles.labCon}>
                 <label className={styles.container} htmlFor="user">
                     <p className={styles.content}>Nazywam się </p><input className={styles.input} placeholder='imię i nazwisko' type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange}></input>
-                </label>
-                <label className={styles.container} htmlFor="user">
-                    <p className={styles.content}>Pracuje dla firmy</p><input className={styles.input} placeholder='nazwa firmy' type="text" id="user" name="company" value={this.state.company} onChange={this.handleChange}></input>
                 </label>
                 <label className={styles.container} htmlFor="user">
                     <p className={styles.content}>Powód wiadomości</p><input className={styles.input} placeholder='powód' type="text" id="user" name="reason" value={this.state.reason} onChange={this.handleChange}></input>
@@ -40,6 +37,7 @@ class Form extends React.Component {
                     <p className={styles.content}>Jak się z tobą skontaktować?</p><input className={styles.input} placeholder='email' type="e-mail" id="user" name="email" value={this.state.email} onChange={this.handleChange}></input>
                     <input className={styles.input} placeholder='numer telefonu' type="number" id="user" name="number" value={this.state.number} onChange={this.handleChange}></input>
                 </label>
+                </section>
             </form>
         );
     }

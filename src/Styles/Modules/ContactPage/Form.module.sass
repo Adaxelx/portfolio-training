@@ -4,9 +4,7 @@
     margin-top: $margin-content
     position: relative
     width: 80%
-    padding: 5px;
-    display: flex
-    flex-direction: column
+    padding: 5px
     &::before
         content: ""
         position: absolute
@@ -17,12 +15,18 @@
         z-index: -1
         background-color: $yellow-color
 
+.labCon
+    display: flex
+    flex-direction: column
+
 .title
     font-size: $font-sizeSubtitle
+    text-align: center
+
 
 .container
     width: 100%
-    margin-top: 15px
+    margin-top: 20px
 
 .content
     font-size: $font-sizeContent
@@ -33,10 +37,21 @@
     border-bottom: 1px solid black
     width: 100%
     padding: 5px 0
+    font-size: $font-sizeContent
+    margin-top: 5px
 
 .message
+    font-size: $font-sizeContent
     background-color: transparent
     border: none
     border-bottom: 1px solid black
     width: 100%
     padding: 5px 0
+
+@media (orientation: landscape)
+    .container
+        width: 40%
+    .labCon
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around

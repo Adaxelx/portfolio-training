@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../../Styles/Modules/StartPage/About.module.sass'
 import img from '../../images/Tkd.jpg'
 import Title from '../Title'
-let scrollV = window.scrollY
 
 const About = () =>{
     return (
