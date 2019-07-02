@@ -21,7 +21,7 @@ class App extends React.Component{
   render(){
   return (
     <div className="container">
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <NavBar active={this.state.active} handleClick={this.handleClick}/>
         <NavOpen active={this.state.active} handleClick={this.handleClick}/>
         <Switch>
