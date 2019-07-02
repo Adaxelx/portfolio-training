@@ -7,6 +7,8 @@ class Form extends React.Component {
         company: '',
         reason: '',
         message: '',
+        email: '',
+        number: ''
      }
 
      handleChange = (e) =>{
@@ -30,9 +32,13 @@ class Form extends React.Component {
                 <label className={styles.container} htmlFor="user">
                     <p className={styles.content}>Powód wiadomości</p><input className={styles.input} placeholder='powód' type="text" id="user" name="reason" value={this.state.reason} onChange={this.handleChange}></input>
                 </label>
-                <label className='message' htmlFor="message">
+                <label className={styles.container} htmlFor="message">
                     <p className={styles.content}>Napisz coś więcej</p>
                     <textarea className={styles.message} id="message" name="message" value={this.state.message} placeholder='nie krępuj się' onChange={this.handleChange}></textarea>
+                </label>
+                <label className={styles.container} htmlFor="user">
+                    <p className={styles.content}>Jak się z tobą skontaktować?</p><input className={styles.input} placeholder='email' type="e-mail" id="user" name="email" value={this.state.email} onChange={this.handleChange}></input>
+                    <input className={styles.input} placeholder='numer telefonu' type="number" id="user" name="number" value={this.state.number} onChange={this.handleChange}></input>
                 </label>
             </form>
         );
