@@ -1,1 +1,1 @@
-Some elements of desing are based HelloRoman website: https://helloroman.com/
+Some elements of desing are based on HelloRoman website: https://helloroman.com/
