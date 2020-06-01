@@ -9,7 +9,7 @@ I want to create my first-test portfolio as part of self-development in webdesin
 
 ## Tech
 
-- <b>Reac</b>
+- <b>React</b>
 - <b>Sass</b>
 
 ## Folder structure
